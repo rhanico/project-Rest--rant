@@ -2,11 +2,11 @@ const React = require('react')
 const Def = require('../default')
 
 function new_form () {
-    return (
+    return(
         <Def>
             <main>
-                <h1> Add a New Place </h1>
-                <form method="POST" action="./places">
+                <h1> ADD A NEW PLACE </h1>
+                <form method="POST" action="/places">
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
                         <input className="form-control" id="name" name="name" required />
@@ -29,6 +29,7 @@ function new_form () {
                     </div>
                     <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
+
 
             </main>
         </Def>
