@@ -6,4 +6,13 @@ h1 {
     text-align: center;
     color: cornflowerblue;
   }
-  
+
+#saladImg {
+    height: 50rem;
+    width: auto;
+}
+#coneImg {
+    height: 50rem;
+    width: auto;
+}
+
