@@ -4,8 +4,16 @@ main {
 
 h1 {
     text-align: center;
-    color: cornflowerblue;
+    color: rgb(0, 0, 0);
   }
+#h1404 {
+    color: red;
+}
+
+img {
+    height: 25rem;
+    width: auto;
+}
 
 #saladImg {
     height: 50rem;
