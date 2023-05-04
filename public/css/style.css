@@ -9,7 +9,7 @@ main {
     background-color: beige;
     
 }
-form {
+#newForm {
     text-align: left;
 }
 
@@ -67,3 +67,7 @@ nav a:hover {
     text-decoration: none;
 }
 
+#editDeleteBtn div{
+    display: inline-block;
+    margin: 20px;
+}
