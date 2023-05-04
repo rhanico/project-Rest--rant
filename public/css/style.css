@@ -10,6 +10,11 @@ main {
     
 }
 
+a {
+    text-decoration: none;
+    color: brown;
+}
+
 h1 {
     text-align: center;
     color: rgb(0, 0, 0);
@@ -55,7 +60,7 @@ nav a {
 }
 
 nav a:hover {
-    color: red;
+    color: rgb(206, 61, 61);
     text-decoration: none;
 }
 
