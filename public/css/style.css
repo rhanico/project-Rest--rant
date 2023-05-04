@@ -9,6 +9,9 @@ main {
     background-color: beige;
     
 }
+form {
+    text-align: left;
+}
 
 a {
     text-decoration: none;

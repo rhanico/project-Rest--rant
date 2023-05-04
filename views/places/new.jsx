@@ -4,7 +4,14 @@ const Def = require('../default')
 function new_form () {
     return(
         <Def>
-            <main>
+            <html>
+                <head>
+                    <title>ADD PLACE</title>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+                    <link rel="stylesheet" href="/css/style.css" />
+                </head>
+                <body>
+                <main>
                 <h1> ADD A NEW PLACE </h1>
                 <form method="POST" action="/places">
                     <div className="form-group">
@@ -32,6 +39,8 @@ function new_form () {
 
 
             </main>
+                </body>
+            </html>
         </Def>
     )
 }
