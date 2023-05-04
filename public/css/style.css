@@ -1,5 +1,13 @@
-main {
+body {
+    background-color:  beige;
     text-align: center;
+}
+
+main {
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: beige;
+    
 }
 
 h1 {
@@ -22,5 +30,32 @@ img {
 #coneImg {
     height: 50rem;
     width: auto;
+}
+
+nav {
+    background-color: rgb(243, 222, 122);
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a {
+    color:black;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: none;
 }
 
