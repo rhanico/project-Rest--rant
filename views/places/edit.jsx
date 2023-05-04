@@ -18,7 +18,7 @@ function edit_form (data) {
                             className="form-control" 
                             id="name" 
                             name="name" 
-                            value={`${data.place.name}`}
+                            value={data.place.name}
                         required />
                     </div>
                     <div className="form-group">
@@ -27,7 +27,7 @@ function edit_form (data) {
                             className="form-control" 
                             id="name" 
                             name="name" 
-                            value={`${data.place.pic}`}
+                            value={data.place.pic}
                         required />
                     </div>
                     <div className="form-group">
@@ -36,7 +36,7 @@ function edit_form (data) {
                             className="form-control" 
                             id="name" 
                             name="name" 
-                            value={`${data.place.city}`}
+                            value={data.place.city}
                         required />
                     </div>
                     <div className="form-group">
@@ -45,7 +45,7 @@ function edit_form (data) {
                             className="form-control" 
                             id="name" 
                             name="name" 
-                            value={`${data.place.state}`}
+                            value={data.place.state}
                         required />
                     </div>
                     <div className="form-group">
@@ -54,10 +54,10 @@ function edit_form (data) {
                             className="form-control" 
                             id="name" 
                             name="name" 
-                            value={`${data.place.cuisines}`}
+                            value={data.place.cuisines}
                         required />
                     </div>
-                    <input className="btn btn-primary" type="submit" value="Add Place" />
+                    <input className="btn btn-primary" type="submit" value="Update Place" />
                 </form>
                 </main>
             </html>
