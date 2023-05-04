@@ -38,8 +38,12 @@ function show (data) {
                     <h4>
                         COMMENTS
                     </h4>
-                    <p>NO COMMENTS YET!</p>
+                    <p>NO COMMENTS YET</p>
 
+                </div>
+                <div>
+                    <a href="" className='btn btn-warning'></a>
+                    <EDIT></EDIT>
                 </div>
             </main>
             
