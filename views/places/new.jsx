@@ -36,8 +36,6 @@ function new_form () {
                     </div>
                     <input className="btn btn-primary" type="submit" value="Add Place" />
                 </form>
-
-
             </main>
                 </body>
             </html>
