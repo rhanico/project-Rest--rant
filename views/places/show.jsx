@@ -26,10 +26,21 @@ function show (data) {
                     </h5>
                 </div>
                 <div>
-                    <h3>RATINGS</h3>
+                    <h3>
+                        RATINGS
+                    </h3>
+                    <h4> 
+                        CURRENTLY UNRATED!
+                    </h4>
                 </div>
-            
-                <p>CURRENTLY UNRATED</p>
+                <hr/>
+                <div>
+                    <h4>
+                        COMMENTS
+                    </h4>
+                    <p>NO COMMENTS YET!</p>
+
+                </div>
             </main>
             
         </body>
