@@ -11,6 +11,11 @@ function edit_form (data) {
                     <link rel="stylesheet" href="/css/style.css" />
                 </head>
                 <main>
+                <div>
+                    <h1>
+                        EDIT PAGE
+                    </h1>
+                </div>
                 <form id="newForm" method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
