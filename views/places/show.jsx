@@ -42,7 +42,7 @@ function show (data) {
                 </div>
                 <div id='editDeleteBtn'>
                     <div>
-                        <a href={`/places/${data.id}/EDIT`} className="btn btn-warning"> 
+                        <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
                             EDIT
                         </a>
                     </div>
