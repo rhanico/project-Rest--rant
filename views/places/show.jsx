@@ -2,6 +2,15 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+    let message = ''
+     if (data.message) {
+        message = (
+            <h4 class="alert alert-primary" role="alert">
+                {data.message}
+            </h4>
+        )
+     }
+
     return (
         <Def>
         <html>
@@ -13,17 +22,23 @@ function show (data) {
         <body>
             <main>
                 <h1>{data.place.name}</h1>
+                    {message}
                 <div>
                     <img src={data.place.pic} alt={data.place.name} />
+                    <h3>
+                        Located in {data.place.city}, {data.place.state}
+                    </h3>
                 </div>
                 <div>
                     <h3> 
                         DESCRIPTION 
                     </h3>
-                    <h5>
-                        Located in {data.place.city}, {data.place.state} 
-                        and serving {data.place.cuisines}!
-                    </h5>
+                    <h4>
+                        {data.place.showEstablished()}
+                    </h4>
+                    <h4>
+                        Serving {data.place.cuisines}
+                    </h4>
                 </div>
                 <div>
                     <h3>
