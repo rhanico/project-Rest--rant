@@ -16,7 +16,7 @@ function edit_form (data) {
                         EDIT PAGE
                     </h1>
                 </div>
-                <form id="newForm" method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+                <form id="newForm" method="POST" action={`/places/${data.placeclea.id}?_method=PUT`}>
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
                         <input 
@@ -60,6 +60,15 @@ function edit_form (data) {
                             id="name" 
                             name="name" 
                             value={data.place.cuisines}
+                        required />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="found">Founded</label>
+                        <input 
+                            className="form-control" 
+                            id="founded" 
+                            name="founded" 
+                            value={data.place.founded}
                         required />
                     </div>
                     <input className="btn btn-primary" type="submit" value="Update Place" />
