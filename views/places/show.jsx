@@ -74,12 +74,12 @@ function show (data) {
                 </div>
                 <div id='editDeleteBtn'>
                     <div>
-                        <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
+                        <a href={`/places/${data.place.id}/edit`} className="btn btn-warning"> 
                             EDIT
                         </a>
                     </div>
                     <div>
-                        <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
+                        <form method="POST" action={`/places/${data.place.id}?_method=DELETE`}> 
                         <button type="submit" className="btn btn-danger">
                             DELETE
                         </button>
@@ -103,42 +103,37 @@ function show (data) {
                 <hr/>
                 </div>
                 <hr/>
-                <div>
                     <div>
                         <h2>
                             Tell Us About Your Thoughts!
                         </h2>
                         <div className="row-sm-7 row-md-5 row-lg-">
-                        <form action={`/places/${data.place.id}/comment`} method="POST">
-                            <div>
-                                <label htmlFor="auhtor"> Author </label>
-                                <input id='author' name='auhtor' className='form-control' />
-                            </div>
-                            <div>
-                                <label htmlFor="content"> Add Comments</label>
-                                <textarea id='content' name='content' className='form-control'></textarea>
-                            </div>
-                            <div>
-                                <label htmlFor="stars"> Star Rating </label>
-                                <input step="1" type='range' max="5" min="1" id="stars" name="stars" className="form-control"/>
-                            </div>
-                            <div> 
-                                <label htmlFor="rant"> RANT?</label>
-                                <input type="checkbox" id='rant' name='rant' className='form-control'/>
-                            </div>
-                            <hr/>
-                            <div>
-                                <input className="btn btn-primary" type="submit" value="Add Comment!" />
-                            </div>
-                        </form>
-                            
+                            <form action={`/places/${data.place.id}/comment`} method="POST">
+                                <div>
+                                    <label htmlFor="auhtor"> Author </label>
+                                    <input id="auhtor" name="auhtor" className="form-control" />
+                                </div>
+                                <div>
+                                    <label htmlFor="content"> Add Comments</label>
+                                    <input type='textarea' id='content' name='content' className="form-control"></input>
+                                </div>
+                                <div>
+                                    <label htmlFor="stars"> Star Rating </label>
+                                    <input type="range" step={1} max={5} min={1} id="stars" name="stars" className="form-range"/>
+                                </div>
+                                <div> 
+                                    <label htmlFor="rant"> RANT?</label>
+                                    <input type="checkbox" id='rant' name='rant' className="form-check-inout form-control"/>
+                                </div>
+                                <hr/>
+                                <div>
+                                    <input className="btn btn-primary" type="submit" value="Add Comment!" />
+                                </div>
+                            </form>   
                         </div>
-                    </div>
-                </div>
-                
-            </main>
-            
-        </body>
+                    </div>  
+                 </main>
+            </body>
         </html>
 
         </Def>

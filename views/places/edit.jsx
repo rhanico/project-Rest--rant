@@ -16,7 +16,7 @@ function edit_form (data) {
                         EDIT PAGE
                     </h1>
                 </div>
-                <form id="newForm" method="POST" action={`/places/${data.placeclea.id}?_method=PUT`}>
+                <form id="newForm" method="POST" action={`/places/${data.place.id}?_method=PUT`}>
                     <div className="form-group">
                         <label htmlFor="name">Place Name</label>
                         <input 
@@ -30,8 +30,8 @@ function edit_form (data) {
                         <label htmlFor="pic">Place Picture</label>
                         <input 
                             className="form-control" 
-                            id="name" 
-                            name="name" 
+                            id="pic" 
+                            name="pic" 
                             value={data.place.pic}
                         required />
                     </div>
@@ -39,8 +39,8 @@ function edit_form (data) {
                         <label htmlFor="city">City</label>
                         <input 
                             className="form-control" 
-                            id="name" 
-                            name="name" 
+                            id="city" 
+                            name="city" 
                             value={data.place.city}
                         required />
                     </div>
@@ -48,8 +48,8 @@ function edit_form (data) {
                         <label htmlFor="state">State</label>
                         <input 
                             className="form-control" 
-                            id="name" 
-                            name="name" 
+                            id="state" 
+                            name="state" 
                             value={data.place.state}
                         required />
                     </div>
@@ -57,8 +57,8 @@ function edit_form (data) {
                         <label htmlFor="cuisines">Cuisines</label>
                         <input 
                             className="form-control" 
-                            id="name" 
-                            name="name" 
+                            id="cuisines" 
+                            name="cuisines" 
                             value={data.place.cuisines}
                         required />
                     </div>
