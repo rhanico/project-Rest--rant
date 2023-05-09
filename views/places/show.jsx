@@ -12,30 +12,19 @@ function show (data) {
             return (
                 <div className="border">
                    <h2 className="rant">
-                         {c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}
+                    {c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}
                    </h2>
-                   <h4>
-                         {c.content}
-                   </h4>
-                   <h3>
-                          <strong> - {c.author} </strong>
-                   </h3>
-                   <h4>
-                         Rating: {c.stars}
-                   </h4>
+                   <h4>  {c.content} </h4>
+                   <h3> <strong> - {c.author} </strong></h3>
+                   <h4> Rating: {c.stars}</h4>
+                   <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
+                   <input type="submit" className="btn btn-danger" value="Delete Comment" />
+                    </form>
                 </div>
             )
         })
     }
 
-    let message = ''
-     if (data.message) {
-        message = (
-            <h4 class="alert alert-primary" role="alert">
-                {data.message}
-            </h4>
-        )
-     }
 
     return (
         <Def>
@@ -48,7 +37,6 @@ function show (data) {
         <body>
             <main>
                 <h1>{data.place.name}</h1>
-                    {message}
                 <div>
                     <img src={data.place.pic} alt={data.place.name} />
                     <h3>
@@ -66,21 +54,6 @@ function show (data) {
                         Serving {data.place.cuisines}
                     </h4>
                 </div>
-                <div>
-                    <h3>
-                        RATINGS
-                    </h3>
-                    <h4> 
-                        CURRENTLY UNRATED!
-                    </h4>
-                </div>
-                <hr/>
-                <div>
-                    <h4>
-                        COMMENTS
-                    </h4>
-                        {comments}
-                </div>
                 <div id='editDeleteBtn'>
                     <div>
                         <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
@@ -95,6 +68,44 @@ function show (data) {
                         </form> 
                     </div>
                 </div>
+                <div>
+                <hr/>
+                    <h4>
+                        COMMENTS
+                    </h4>
+                    <div>
+                    {comments}
+                </div>
+                <hr/>
+                </div>
+                <hr/>
+                <div>
+                    <div>
+                          <form action={`/places/${data.place.id}/comment`} method="POST">
+                            <div>
+                                <label htmlFor="auhtor"> Author </label>
+                                <input id='author' name='auhtor' className='form-control' />
+                            </div>
+                            <div>
+                                <label htmlFor="content"> Add Comments</label>
+                                <textarea id='content' name='content' className='form-control'></textarea>
+                            </div>
+                            <div>
+                                <label htmlFor="stars"> Star Rating </label>
+                                <input step="0.5" type='number' max="5" id="stars" name="stars" className="form-control"/>
+                            </div>
+                            <div>
+                                <label htmlFor="rant"> RANT!</label>
+                                <input type="text" id='rant' name='rant' className='form-control'/>
+                            </div>
+                            <div>
+                                <input className="btn btn-primary" type="submit" value="Add Comment!" />
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                
             </main>
             
         </body>
