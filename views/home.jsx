@@ -5,13 +5,21 @@ function home () {
     return (
       <Def>
           <main>
-              <h1> REST-Rant! </h1>
+             <div id="title">
+             <h1> REST-Rant! </h1>
+             </div>
               <div>
-                <img id='saladImg' src="./images/saladbowl.jpg" alt="salad bowl" />
+                <img id='breadImg' src="./images/bread.jpg" alt="bread" />
               </div>
               <div>
-                Photo by <a href="https://unsplash.com/@pwign?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anh Nguyen</a> 
-                on <a href="https://unsplash.com/images/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                <h6>
+                Photo by 
+                <a href="https://unsplash.com/@caiopezzo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                  Caio Pezzo</a> on 
+                <a href="https://unsplash.com/photos/6K9LDPXxRsA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                  Unsplash
+                </a>
+                </h6>
               </div>
               <a href="/places">
                 <button className='btn-primary'>Places Page</button>

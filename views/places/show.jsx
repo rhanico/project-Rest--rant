@@ -28,7 +28,7 @@ function show (data) {
         )
         comments = data.place.comments.map ( c => {
             return (
-                <div className="border">
+                <div className="card">
                    <h2 className="rant">
                     {c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}
                    </h2>
@@ -127,7 +127,7 @@ function show (data) {
                                 </div>
                                 <hr/>
                                 <div>
-                                    <input className="btn btn-primary" type="submit" value="Add Comment!" />
+                                    <input className="btn btn-primary" type="submit" value="ADD COMMENT" />
                                 </div>
                             </form>   
                         </div>

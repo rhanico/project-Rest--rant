@@ -23,12 +23,19 @@ function index (data) {
   
     return (
       <Def>
-          <main>
+        <html>
+          <head>
+            <title>ADD PLACE</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
+            <link rel="stylesheet" href="/css/style.css" />
+          </head>
+        <main>
               <h1> Restaurant to Rave or Rant About </h1>
               <div className="row-sm-6 row-md-4 row-lg-3">
               {placesFormatted}
               </div>
           </main>
+        </html>
       </Def>
   )
   }
