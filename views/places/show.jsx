@@ -7,7 +7,21 @@ function show (data) {
             No Comments Yet!
         </h3>
     )
+    let rating = (
+        <h3 className = "inactive" >
+            Not Yet Rated!
+        </h3>
+    )
     if ( data.place.comments.legnth ) {
+        let sumRatings = data.place.comments.reduce((tot, c) => {
+            return tot + c.stars
+        }, 0)
+        let averageRating = sumRatings / data.place.comments.length
+        rating = (
+            <h3>
+                {Math.round(averageRating)} stars
+            </h3>
+        )
         comments = data.place.comments.map ( c => {
             return (
                 <div className="border">
@@ -39,20 +53,20 @@ function show (data) {
                 <h1>{data.place.name}</h1>
                 <div>
                     <img src={data.place.pic} alt={data.place.name} />
-                    <h3>
+                    <h4>
                         Located in {data.place.city}, {data.place.state}
-                    </h3>
+                    </h4>
                 </div>
                 <div>
-                    <h3> 
+                    <h5> 
                         DESCRIPTION 
-                    </h3>
-                    <h4>
+                    </h5>
+                    <h3>
                         {data.place.showEstablished()}
-                    </h4>
-                    <h4>
+                    </h3>
+                    <h3>
                         Serving {data.place.cuisines}
-                    </h4>
+                    </h3>
                 </div>
                 <div id='editDeleteBtn'>
                     <div>
@@ -69,6 +83,12 @@ function show (data) {
                     </div>
                 </div>
                 <div>
+                    <hr/>
+                    <hr/>
+                    <div>
+                        <h2> RATINGS</h2>
+                        {rating}
+                    </div>
                 <hr/>
                     <h4>
                         COMMENTS
@@ -81,7 +101,11 @@ function show (data) {
                 <hr/>
                 <div>
                     <div>
-                          <form action={`/places/${data.place.id}/comment`} method="POST">
+                        <h2>
+                            Tell Us About Your Thoughts!
+                        </h2>
+                        <div className="row-sm-7 row-md-5 row-lg-">
+                        <form action={`/places/${data.place.id}/comment`} method="POST">
                             <div>
                                 <label htmlFor="auhtor"> Author </label>
                                 <input id='author' name='auhtor' className='form-control' />
@@ -92,17 +116,19 @@ function show (data) {
                             </div>
                             <div>
                                 <label htmlFor="stars"> Star Rating </label>
-                                <input step="0.5" type='number' max="5" id="stars" name="stars" className="form-control"/>
+                                <input step="1" type='range' max="5" min="1" id="stars" name="stars" className="form-control"/>
                             </div>
-                            <div>
-                                <label htmlFor="rant"> RANT!</label>
-                                <input type="text" id='rant' name='rant' className='form-control'/>
+                            <div> 
+                                <label htmlFor="rant"> RANT?</label>
+                                <input type="checkbox" id='rant' name='rant' className='form-control'/>
                             </div>
+                            <hr/>
                             <div>
                                 <input className="btn btn-primary" type="submit" value="Add Comment!" />
                             </div>
-
                         </form>
+                            
+                        </div>
                     </div>
                 </div>
                 
